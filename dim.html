@@ -1,0 +1,545 @@
+<!-- Swiper CSS -->
+<!-- <link
+   rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+   /> -->
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+   .mb-60 {
+   margin-bottom: 60px;
+   }
+      .fade-up {
+   opacity: 0;
+   transform: translateY(20px);
+   animation: fadeUp 0.8s ease-out forwards;
+   }
+   /* Delay the animation for each section */
+   .fade-up:nth-child(1) {
+   animation-delay: 0.2s;
+   }
+   .fade-up:nth-child(2) {
+   animation-delay: 0.4s;
+   }
+   .fade-up:nth-child(3) {
+   animation-delay: 0.6s;
+   }
+   @keyframes fadeUp {
+   to {
+   opacity: 1;
+   transform: translateY(0);
+   }
+   }
+   .c-title {
+   font-family: "Hind Siliguri", Sans-serif;
+   font-size: 38px;
+   font-weight: 700;
+   line-height: 45px;
+   color: #000000;
+   margin: 0;
+   padding: 0;
+   } 
+   .c-desc{
+   color: black;
+   font-family: "Hind Siliguri", Sans-serif;
+   font-size: 16px;
+   line-height: 28px;
+   font-weight: 500;
+   margin-top: 20px;
+   }
+   .c-hero-img{
+   border-style: groove;
+   border-width: 10px 10px 10px 10px;
+   border-color: #FC7F01
+   }
+   /* button */
+   .elementor-button-wrapper{
+   text-align: center;
+   margin: 10px 3px;
+   position: relative;
+   z-index: 2;
+   }
+   .elementor-button {
+   display: inline-block;
+   line-height: 1;
+   font-size: 20px;
+   font-weight: 600;
+   padding: 15px 30px;
+   color: #fff;
+   fill: #fff;
+   text-align: center;
+   transition: all .3s;
+   background-color: #E2860C;
+   border-style: solid;
+   }
+   /* Hover Animation */
+   .elementor-animation-up-down:hover {
+   animation: upDown 0.5s ease-in-out infinite;
+   }
+   /* Up-Down Keyframes */
+   @keyframes upDown {
+   0%, 100% {
+   transform: translateY(0);
+   }
+   50% {
+   transform: translateY(-10px);
+   }
+   }
+   /* Hover Background Color Change */
+   .elementor-button:hover {
+   background-color: #DA810D;
+   color: #fff;
+   }
+   .elementor-button-icon .e-font-icon-svg {
+   height: 1em;
+   }
+   .elementor-button-icon svg {
+   width: 1em;
+   }
+   /* button  ends */
+   .hero .elementor-button-wrapper {
+   text-align: left !important;
+   }
+   .hero {
+   display: flex;
+   flex-direction: column;     /* mobile: stack */
+   gap: 20px;                  /* space between text & image */
+   }
+   .hero .hero-content,
+   .hero .hero-img {
+   flex: 1;                    /* take equal width on desktop */
+   }
+   .hero .hero-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;    /* vertical center text */
+   }
+   .hero .hero-img {
+   text-align: center;         /* center image */
+   }
+   .hero .hero-img img {
+   max-width: 100%;
+   height: auto;
+   }
+   @media (min-width: 768px) {
+   .hero {
+   flex-direction: row;      /* desktop: side by side */
+   align-items: center;      /* vertical align */
+   }
+   }
+   .sec-2 {
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: center;
+   }
+   .sec-2 .slider-container {
+   position: relative;
+   overflow: hidden;
+   margin: 20px 0;
+   }
+   .sec-2 .slides {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+   gap: 15px; /* gap between images */
+   }
+   .sec-2 .slides img {
+   width: calc((100% / 3) - 10px); /* subtract half of gap for each side */
+   height: 300px;
+   object-fit: cover;
+   border-radius: 10px;
+   border: 5px solid #FC7F01;
+   }
+   /* Navigation Dots */
+   .sec-2 .dots {
+   text-align: center;
+   margin-top: 10px;
+   }
+   .sec-2 .dots button {
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   border: none;
+   background: #FC7F01;
+   opacity: 0.5;
+   margin: 0 5px;
+   cursor: pointer;
+   transition: 0.3s;
+   }
+   .sec-2 .dots button.active {
+   opacity: 1;
+   background: #E2860C;
+   }
+   /* Responsive: 1 image on mobile */
+   @media (max-width: 767px) {
+   .sec-2 .slides img {
+   width: 100%; /* 1 image per view */
+   }
+   }
+   /* .price {
+   color: #333D51;
+   text-align: center;
+   font-family: "Hind Siliguri", Sans-serif;
+   font-size: 28px;
+   font-weight: 600;
+   }
+   .position1{
+   position: relative;
+   z-index: 1;
+   display: inline-block;
+   }
+   .position1 svg {
+   height: calc(100% + 20px);
+   left: 50%;
+   overflow: visible;
+   position: absolute;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: calc(100% + 20px);
+   } */
+   .price-section {
+   background-color: #e7f2dd; /* light green bg */
+   padding: 30px 20px;
+   text-align: center;
+   font-family: 'Hind Siliguri', sans-serif;
+   }
+   .price-section .price {
+   font-size: 28px;
+   color: #333D51;
+   position: relative;
+   display: block;
+   margin-bottom: 20px;
+   position: relative;
+   z-index: 1;
+   }
+   /* original price strike-through with svg */
+   .price-section .price .position1 svg {
+   position: absolute;
+   top: 0%;
+   left: -10px;
+   width: 115%;
+   height: 1.8em;
+   stroke: #d42d6b;
+   stroke-width: 10;
+   fill: none;
+   }
+   .price-section .price span {
+   position: relative;
+   z-index: 1;
+   margin-left: 10px;
+   margin-right: 10px;
+   }
+   /* offer price styling */
+   .price-section .of-price {
+   font-size: 32px;
+   font-weight: 700;
+   color: #4a1f4d;
+   position: relative;
+   display: inline-block;
+   }
+   .price-section .of-price .position2 svg {
+   position: absolute;
+   top: -10%;
+   left: -8px;
+   width: 115%;
+   height: 1.8em;
+   stroke: #3cb82c;
+   stroke-width: 10;
+   fill: none;
+   }
+   .price-section .of-price span {
+   position: relative;
+   z-index: 1;
+   margin-left: 10px;
+   margin-right: 10px;
+   }
+   .price-section span + span {
+   font-size: 24px;
+   font-weight: 500;
+   margin-left: 5px;
+   }
+   .list-items {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   }
+   .list-item {
+   font-family: "Hind Siliguri", Sans-serif;
+   color: #000000;
+   font-size: 22px;
+   font-weight: 600;
+   line-height: 48px;
+   position: relative; /* for pseudo-element */
+   padding-bottom: 10px; /* space for underline */
+   }
+   .list-item:not(:last-child)::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 2px; /* underline thickness */
+   background-color: #ddd; /* underline color */
+   }
+   .list-item svg{
+   width: 1.5em;
+   height: 1em;
+   stroke: #fff;
+   stroke-width: 10;
+   fill: #6EC1E4;
+   margin-right: 5px;
+   }
+   .c-contact {
+   background-color: #00000009;
+   text-align: center;
+   padding: 35px 10px;
+   }
+   .c-btn{
+   font-family: "Hind Siliguri", Sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.5);
+   border-radius: 5px;
+   padding: 20px 40px;
+   background-color: #69727d;;
+   color: #fff;
+   }
+   .c-btn svg{
+   width: 18px;
+   margin-right: 7px;
+   fill: #fff;
+   } 
+   .p-desc {
+   text-align: center;
+   padding: 15px;
+   }
+   .p-desc p{
+   font-size: 18px;
+   line-height: 32px;
+   } 
+   .p-desc img{
+   height: 450px;
+   /* height: 300px; */
+   object-fit: cover;
+   border-radius: 10px;
+   border: 5px solid #FC7F01;
+   }
+   @media screen and (max-width: 767px){
+   .mb-60 {
+   margin-bottom: 15px;
+   }
+   .c-title{
+     text-align: center;
+     font-size: 32px;
+   }
+   .c-desc {
+     text-align: center;
+    font-size: 16px;
+   }
+   .hero .elementor-button-wrapper {
+   text-align: center !important;
+   }
+   .price-section .price {
+   line-height: 42px;
+   }
+   .price-section .of-price {
+   line-height: 48px;
+   }
+   .list-item {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 28px;
+
+   }
+   
+   }
+</style>
+<div class="hero mb-60 fade-up">
+   <div class="hero-content">
+      <h2 class="c-title">ডিম বেচে কি শিখলাম?</h2>
+      <p class="c-desc">
+         ডিম বেচে কি শিখলাম – এটি শুধু ব্যবসার গল্প নয়, বরং সাহস, সৃজনশীলতা ও গ্রোথ হ্যাকিংয়ের এক বাস্তব যাত্রা। চালডালে মার্কেটিং ম্যানেজার থেকে শুরু করে নিজস্ব ব্যবসা দাঁড় করানোর পথে লেখকের অভিজ্ঞতা, সফলতা, ব্যর্থতা আর অদেখা সুযোগ খুঁজে বের করার কৌশল, সবই উঠে এসেছে এই বইতে। ক্ষুদ্র উদ্যোক্তা থেকে বড় ব্র্যান্ড, এমনকি ডিজিটাল মার্কেটিংয়ে ক্যারিয়ার গড়তে চাওয়া সবার জন্য থাকবে প্র্যাকটিক্যাল টিপস, কৌশল ও অনুপ্রেরণামূলক গল্প। আপনি যদি নিজের ব্যবসা বাড়াতে চান, অথবা নতুনভাবে ভাবতে শিখতে চান, তাহলে এই বইটি হবে আপনার জন্য এক বিশ্বস্ত সঙ্গী।
+      </p>
+      <div class="elementor-button-wrapper">
+         <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+            <span class="elementor-button-content-wrapper">
+               <span class="elementor-button-icon">
+                  <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                  </svg>
+               </span>
+               <span class="elementor-button-text">অর্ডার করতে চাই</span>
+            </span>
+         </a>
+      </div>
+   </div>
+   <div class="hero-img">
+      <img src="https://stx-v3-static-assets.obs.as-south-208.rcloud.reddotdigitalit.com/likhy/images/products/cbb6a81c51d547689bf3/1755165394036_19.webp" 
+         alt="" class="c-hero-img">
+   </div>
+</div>
+<div class="row mb-2 fade-up">
+   <div class="sec-2">
+      <h2 class="c-title mb-4">ডিম বেচে কি শিখলাম?</h2>
+      <p class="c-desc mb-4">
+         নামাজের পোশাক নিয়ে চিন্তা মুক্ত, নামাজে অস্বস্থি আসবে না তাই ইবাদাত হবে তৃপ্তিমত...
+      </p>
+      <div class="slider-container">
+         <div class="slides">
+            <img src="https://stx-v3-static-assets.obs.as-south-208.rcloud.reddotdigitalit.com/likhy/images/products/cbb6a81c51d547689bf3/1755165807958_10.webp" alt="Image 1">
+            <img src="https://stx-v3-static-assets.obs.as-south-208.rcloud.reddotdigitalit.com/likhy/images/products/cbb6a81c51d547689bf3/1755165781630_2.webp" alt="Image 2">
+            <img src="https://stx-v3-static-assets.obs.as-south-208.rcloud.reddotdigitalit.com/likhy/images/products/cbb6a81c51d547689bf3/1755165845479_4.webp" alt="Image 3">
+            <img src="https://stx-v3-static-assets.obs.as-south-208.rcloud.reddotdigitalit.com/likhy/images/products/cbb6a81c51d547689bf3/1755165807958_10.webp" alt="Image 4">
+            <img src="https://stx-v3-static-assets.obs.as-south-208.rcloud.reddotdigitalit.com/likhy/images/products/cbb6a81c51d547689bf3/1755165781630_2.webp" alt="Image 5">
+         </div>
+      </div>
+      <div class="dots"></div>
+      <div class="price-section">
+         <h3 class="price">
+            রেগুলার মূল্য 
+            <span class="position1">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none">
+                  <path d="M497.4,23.9C301.6,40,155.9,80.6,4,144.4"></path>
+                  <path d="M14.1,27.6c204.5,20.3,393.8,74,467.3,111.7"></path>
+               </svg>
+               </svg>
+               ১৪০০/-
+            </span>
+            <span>টাকা</span>
+         </h3>
+         <h1 class="of-price">
+            আজকের অফার মূল্য মাত্র 
+            <span class="position2">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none">
+                  <path d="M325,18C228.7-8.3,118.5,8.3,78,21C22.4,38.4,4.6,54.6,5.6,77.6c1.4,32.4,52.2,54,142.6,63.7 c66.2,7.1,212.2,7.5,273.5-8.3c64.4-16.6,104.3-57.6,33.8-98.2C386.7-4.9,179.4-1.4,126.3,20.7"></path>
+               </svg>
+               ১২৯০/-
+            </span>
+            <span>টাকা</span>
+         </h1>
+      </div>
+      <div class="elementor-button-wrapper">
+         <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+            <span class="elementor-button-content-wrapper">
+               <span class="elementor-button-icon">
+                  <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                  </svg>
+               </span>
+               <span class="elementor-button-text">অর্ডার করতে চাই</span>
+            </span>
+         </a>
+      </div>
+   </div>
+</div>
+<div class="row  mb-60 fade-up">
+   <div class="p-desc">
+      <img src="https://stx-v3-static-assets.obs.as-south-208.rcloud.reddotdigitalit.com/likhy/images/products/cbb6a81c51d547689bf3/1755165855681_23.webp" alt="">
+      <p class="c-desc mt-4 mb-4">ডিম বেচে কি শিখলাম - নামটা শুনলে হয়ত মনে হবে এটা শুধুমাত্র ডিম বিক্রির গল্প বা মার্কেটিং এর বই। কিন্তু আসলে এই বই একজন মার্কেটার থেকে উদ্যোক্তার বাস্তব যাত্রাপথ। যেখানে তিনি তুলে ধরেছেন তার কর্মক্ষেত্রে থেকে উদ্যোক্তা হয়ে উঠার বাস্তব অভিজ্ঞতা। এখানে আছে ব্যর্থতা থেকে শেখা, সৃজনশীলতা, সাহস, ধৈর্য্য আর গ্রোথ হ্যাকিং এর প্র্যাকটিক্যাল আইডিয়া। এছাড় এই বইয়ে আপনি পাবেন, সীমিত বাজেটে ব্যবসা শুরু করার কৌশল
+         বিনা খরচে বিক্রি বাড়ানোর বাস্তব উদাহরণ
+      </p>
+   </div>
+</div>
+<div class="row mb-60 fade-up">
+   <h2 class="c-title mb-4" style="text-align: center;">এই বইয়ে আপনি পাবেন</h2>
+   <div class="col-md-6">
+      <ul class="list-items">
+         <li class="list-item">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+               <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+            </svg>
+            <span>কাস্টমার পাওয়ার জন্য সৃজনশীল গ্রোথ হ্যাকিং আইডিয়া</span>
+         </li>
+         <li class="list-item">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+               <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+            </svg>
+            <span>ছোট ব্যবসাকে বড় ব্র্যান্ডে রূপ দেওয়ার ধাপ</span>
+         </li>
+          <li class="list-item">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+               <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+            </svg>
+            <span>যদি আপনি ব্যবসা শুরু করতে চান, ক্যারিয়ারে গ্রোথ আনতে চান, বা অনুপ্রেরণা খুঁজছেন—তাহলে এই বই হবে আপনার জন্য এক বিশ্বস্ত ও প্র্যাকটিক্যাল সঙ্গী।</span>
+         </li>
+         <li class="list-item">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+               <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+            </svg>
+            <span>সীমিত বাজেটে ব্যবসা শুরু করার কৌশল</span>
+         </li>
+      </ul>
+   </div>
+   <div class="col-md-6">
+      <ul class="list-items">
+          <li class="list-item">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+               <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+            </svg>
+            <span><strong>এই বই শুধু ক্ষুদ্র উদ্যোক্তার জন্য নয়। </strong>আপনি যদি একজন মার্কেটার হন, স্টার্টআপ ফাউন্ডার হন, বা কেবল জানতে চান ব্যবসা কিভাবে বাড়ে—তাহলে এখানকার শিক্ষা ও কৌশল আপনার জন্য সমানভাবে কার্যকর হবে।</span>
+         </li>
+          <li class="list-item">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+               <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+            </svg>
+            <span>ব্যর্থতা থেকে শেখা বাস্তব উদ্যোক্তা মানসিকতা গঠনের প্র্যাকটিক্যাল গাইড</span>
+         </li>
+      </ul>
+   </div>
+</div>
+<div class="row mb-60 fade-up">
+   <div class="c-contact">
+      <h1 class="c-title mb-4">প্রয়োজনে কল করুন</h1>
+      <a href="tel:018xxxxxxx" class="btn c-btn">
+         <svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-alt" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path>
+         </svg>
+         018xxxxxxx
+      </a>
+   </div>
+</div>
+<script>
+   const slidesContainer = document.querySelector(".slides");
+   const slides = document.querySelectorAll(".slides img");
+   const dotsContainer = document.querySelector(".dots");
+   
+   let currentIndex = 0;
+   let slidesPerView = window.innerWidth < 768 ? 1 : 3;
+   
+   // Create navigation dots
+   function createDots() {
+     dotsContainer.innerHTML = "";
+     const dotCount = Math.ceil(slides.length / slidesPerView);
+     for(let i = 0; i < dotCount; i++){
+       const dot = document.createElement("button");
+       if(i === 0) dot.classList.add("active");
+       dot.addEventListener("click", () => {
+         currentIndex = i;
+         updateSlider();
+       });
+       dotsContainer.appendChild(dot);
+     }
+   }
+   
+   function updateSlider() {
+     slidesContainer.style.transform = `translateX(-${currentIndex * (100 / slidesPerView)}%)`;
+     const dots = document.querySelectorAll(".dots button");
+     dots.forEach(dot => dot.classList.remove("active"));
+     dots[currentIndex]?.classList.add("active");
+   }
+   
+   // Autoplay
+   setInterval(() => {
+     const maxIndex = Math.ceil(slides.length / slidesPerView) - 1;
+     currentIndex = currentIndex < maxIndex ? currentIndex + 1 : 0;
+     updateSlider();
+   }, 4000);
+   
+   createDots();
+   
+   // Update slidesPerView on resize
+   window.addEventListener("resize", () => {
+     slidesPerView = window.innerWidth < 768 ? 1 : 3;
+     createDots();
+     updateSlider();
+   });
+</script>

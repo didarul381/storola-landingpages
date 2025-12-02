@@ -1,0 +1,598 @@
+<style>
+   .hero-sec {
+   height: 500px;
+   background-color: #314529;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   text-align: center;
+   padding: 15px;
+   }
+   .elementor-shape-bottom {
+   bottom: -1px;
+   }
+   .elementor-shape {
+   direction: ltr;
+   left: 0;
+   line-height: 0;
+   overflow: hidden;
+   position: absolute;
+   z-index: 100;
+   width: 100%;
+   }
+   .elementor-shape-bottom:not([data-negative=true]) svg {
+   z-index: -1;
+   }
+   .elementor-shape svg {
+   display: block;
+   left: 50%;
+   position: relative;
+   transform: translateX(-50%);
+   width: calc(100% + 1.3px);
+   }
+   .elementor-shape .elementor-shape-fill {
+   fill: #fff;
+   transform: rotateY(0deg);
+   transform-origin: center;
+   }
+   .elementor-shape[data-negative=false].elementor-shape-bottom, .elementor-shape[data-negative=true].elementor-shape-top {
+   transform: rotate(180deg);
+   }
+   .lp-logo{
+   margin: 0 auto;
+   padding-top: 30px;
+   /* height: 200px; */
+   width: 280px;
+   }
+   .h-title{
+   color: #fff;
+   font-family: "Anek Bangla", Sans-serif;
+   font-size: 40px;
+   font-weight: 600;
+   line-height: 60px;
+   -webkit-text-stroke-width: 0px;
+   stroke-width: 0px;
+   -webkit-text-stroke-color: #020202;
+   stroke: #020202;
+   text-shadow: -6px 11px 0px rgba(0, 0, 0, 0.47);
+   margin-top: 10px;
+   margin-bottom: 30px;
+   /* color: #64FF00; */
+   }
+   /* button */
+   .elementor-button-wrapper{
+   text-align: center;
+   margin: 10px 3px;
+   position: relative;
+   z-index: 2;
+   }
+   .elementor-button {
+   display: inline-block;
+   line-height: 1;
+   font-size: 20px;
+   font-weight: 600;
+   padding: 15px 30px;
+   color: #fff;
+   fill: #fff;
+   text-align: center;
+   transition: all .3s;
+   background-color: #E2860C;
+   border-style: solid;
+   }
+   /* Hover Animation */
+   .elementor-animation-up-down:hover {
+   animation: upDown 0.5s ease-in-out infinite;
+   }
+   /* Up-Down Keyframes */
+   @keyframes upDown {
+   0%, 100% {
+   transform: translateY(0);
+   }
+   50% {
+   transform: translateY(-10px);
+   }
+   }
+   /* Hover Background Color Change */
+   .elementor-button:hover {
+   background-color: #DA810D;
+   color: #fff;
+   }
+   .elementor-button-icon .e-font-icon-svg {
+   height: 1em;
+   }
+   .elementor-button-icon svg {
+   width: 1em;
+   }
+   /* button  ends */
+   .lp-product {
+   margin-top: 30px;
+   margin-bottom: 20px;
+   }
+   .lp-product .cards{
+   padding: 7px;
+   border-radius: 6px;
+   border-style: solid;
+   border-width: 2px 2px 2px 2px;
+   border-color: #EEEEEE;
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+   margin-bottom: 10px;
+   transition: 0.3s;
+   }
+   .lp-product .cards:hover{
+   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.8);
+   transform: scale(1.02);
+   }
+   .lp-product .cards .c-body .elementor-button {
+   font-size: 12px;
+   font-weight: 600;
+   padding: 10px 15px;
+   }
+   .lp-product .cards .c-body h2{
+   text-align: center;
+   font-family: "Anek Bangla", Sans-serif;
+   font-size: 18px;
+   line-height: 32px;
+   font-weight: 700;
+   }
+   .lp-product .cards .c-body p{
+   text-align: center;
+   font-family: "Anek Bangla", Sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+   }
+   @media screen and (max-width: 767px){
+   .lp-logo{
+   width: 200px;
+   padding-top: 20px;
+   }
+   .h-title{
+   font-size: 32px;
+   line-height: 52px;
+   }
+   }
+</style>
+<section class="hero-sec">
+   <div class="lp-logo">
+      <a href="https://specialnagar.com/">
+      <img src="https://storola-client-space.sgp1.cdn.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/logo/SPN.png" title="" alt="" class="img-responsive" style=" ">
+      </a>
+   </div>
+   <h3 class="h-title">সাইড দিয়ে সেলাই করা গুলো ২৫০ টাকা পিস এবং সেলাই ছাড়া ২২০ টাকা পিস</h3>
+   <div class="elementor-button-wrapper">
+      <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+         <span class="elementor-button-content-wrapper">
+            <span class="elementor-button-icon">
+               <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+               </svg>
+            </span>
+            <span class="elementor-button-text">অর্ডার করতে চাই</span>
+         </span>
+      </a>
+   </div>
+   <div class="elementor-shape elementor-shape-bottom" aria-hidden="true" data-negative="false">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+         <path class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path>
+         <path class="elementor-shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path>
+         <path class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
+      </svg>
+   </div>
+</section>
+<section class="lp-product">
+   <div class="row">
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://rainbowkitchen.shop/wp-content/uploads/2024/11/dc2f85a8-70aa-4f4c-ad0d-4d95a57d82dc-1.jpeg" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://rainbowkitchen.shop/wp-content/uploads/2024/11/dc2f85a8-70aa-4f4c-ad0d-4d95a57d82dc-1.jpeg" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/1.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/2.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/3.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/4.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="cards">
+            <a href="#">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/specialnagar.com/catalog/ptblock/5.png" alt="">
+            </a>
+            <div class="c-body">
+               <h2>3D Floor Mat-01</h2>
+               <div class="elementor-button-wrapper">
+                  <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                           <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                           </svg>
+                        </span>
+                        <span class="elementor-button-text">অর্ডার করতে চাই</span>
+                     </span>
+                  </a>
+               </div>
+               <p>Offer Price : 250 Taka ( সাইড দিয়ে সেলাই করা )<br>Size : 24/16 Inches</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

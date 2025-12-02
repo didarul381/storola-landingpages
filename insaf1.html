@@ -1,0 +1,556 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    .Landing__37__Video {
+    padding: 5px;
+    background-color: #fdfdfd;
+}
+.c-video {
+  text-align: center;
+  padding: 15px;
+  padding-top: 5px;
+}
+.c-video h2{
+    color: #059492;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 600;
+}
+/* .c-video span, .benefit-section  h2 span{
+    position: relative;
+}
+.c-video span .c-hrline,.benefit-section h2 span .c-hrline {
+    height: calc(100% + 20px);
+    left: 50%;
+    overflow: visible;
+    color: red;
+    fill: red;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 20px);
+} */
+
+.c-video span,
+.benefit-section h2 span {
+  position: relative;
+  display: inline-block;
+}
+
+/* SVG Base */
+.c-hrline {
+  width: calc(100% + 20px);
+  /* height: 30px; */
+  display: block;
+  margin: -78px auto 0;
+}
+
+.c-hrline path {
+  fill: none;
+  stroke: #059492; /* Change color if needed */
+  stroke-width: 3px;
+  stroke-linecap: round;
+
+  /* Animation setup */
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: line-draw 1.5s ease-in-out infinite;
+}
+
+/* Infinite wave draw effect */
+@keyframes line-draw {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 500;
+  }
+}
+
+
+.video_VideoPlayers__KZnPY {
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 1399.99px) {
+    .video_VideoPlayers__KZnPY div {
+        height: 400px !important;
+    }
+}
+.video_VideoPlayers__KZnPY div {
+    width: 100% !important;
+    height: 485px !important;
+}
+@media (max-width: 667px) {
+    .Landing__37__Video {
+        padding: 5px;
+    }
+}
+@media (max-width: 667px) {
+    .video_VideoPlayers__KZnPY div {
+        height: 417px !important;
+    }
+}
+.c-video p{
+  font-size: 28px;
+    line-height: 42px;
+    padding: 10px;
+    font-weight: 400;
+}
+   /* button */
+   .elementor-button-wrapper{
+   text-align: center;
+   margin: 10px 3px;
+   position: relative;
+   z-index: 2;
+   }
+   .elementor-button {
+   display: inline-block;
+   line-height: 1;
+   font-size: 20px;
+   font-weight: 600;
+   padding: 15px 30px;
+   color: #fff;
+   fill: #fff;
+   text-align: center;
+   transition: all .3s;
+   background-color: #059492;
+   border-style: solid;
+   }
+   /* Hover Animation */
+   .elementor-animation-up-down:hover {
+   animation: upDown 0.5s ease-in-out infinite;
+   }
+   /* Up-Down Keyframes */
+   @keyframes upDown {
+   0%, 100% {
+   transform: translateY(0);
+   }
+   50% {
+   transform: translateY(-10px);
+   }
+   }
+   /* Hover Background Color Change */
+   .elementor-button:hover {
+   background-color: #059492;
+   color: #fff;
+   }
+   .elementor-button-icon .e-font-icon-svg {
+   height: 1em;
+   }
+   .elementor-button-icon svg {
+   width: 1em;
+   }
+   /* button  ends */
+
+
+/* ---- Custom Slider ---- */
+.custom-slider-container {
+  touch-action: pan-y;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 40px;
+}
+
+.custom-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* .slide {
+  min-width: calc(100% / 3);
+  padding: 5px;
+} */
+.slide {
+    position: relative;
+    min-width: calc(100% / 3);
+    padding: 5px;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* .slide img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+} */
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: fill;
+    display: block;
+}
+/* Buttons */
+.c-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #059492;
+  border: none;
+  padding: 10px 14px;
+  font-size: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 3px 6px rgba(0,0,0,.25);
+}
+.prev { left: 5px; }
+.next { right: 5px; }
+.code-img {
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .slide { min-width: calc(100% / 2); }
+}
+@media (max-width: 575px) {
+  .slide { min-width: 100%; }
+}
+/* Benefit Section */
+.benefit-section {
+  background:#eae9e9;
+  padding:40px 15px;
+  text-align:center;
+}
+
+.benefit-section h2 {
+  color:#059492;
+  font-size:32px;
+  line-height:42px;
+  font-weight:600;
+}
+
+.benefit-section ul {
+  max-width:900px;
+  margin:25px auto;
+  font-size:22px;
+  line-height:34px;
+  list-style:none;
+  padding:0;
+  text-align:left;
+}
+
+.benefit-section ul li {
+    margin-bottom: 12px;
+    line-height: 36px;
+    border-bottom: 2px solid #a4a6a9;
+}
+
+.benefit-section ul li i {
+  color:#059492;
+  margin-right:6px;
+}
+
+.benefit-section .btn-wrap {
+  text-align:center;
+  margin-top:20px;
+}
+
+.benefit-section .btn-wrap a {
+  background:#059492;
+  color:#fff;
+  padding:14px 34px;
+  border-radius:6px;
+  font-size:20px;
+  display:inline-block;
+}
+
+/* Pricing Section */
+.pricing-section {
+  padding:50px 15px;
+  text-align:center;
+  background:#e7e7e7;
+  color:#fff;
+}
+
+.pricing-section h2 {
+  font-size:32px;
+  font-weight:700;
+  line-height:42px;
+  margin-bottom:20px;
+}
+
+.pricing-section .size {
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #059492;
+}
+
+.pricing-section .regular {
+  font-size:30px;
+  color:#0b0900;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.pricing-section .offer {
+  font-size:38px;
+  color:#ff4d4d;
+  font-weight:700;
+  margin-bottom:0;
+}
+
+.pricing-section .btn-wrap {
+  margin-top:30px;
+}
+
+.pricing-section .btn-wrap a {
+  background:#ff4d4d;
+  color:#fff;
+  padding:14px 38px;
+  border-radius:6px;
+  font-size:22px;
+  display:inline-block;
+}
+
+/* Responsive Breakpoints */
+@media (max-width:600px) {
+  .benefit-section h2,
+  .pricing-section h2 {
+    font-size:26px;
+    line-height:36px;
+  }
+
+  .benefit-section ul {
+    font-size:18px;
+    line-height:30px;
+  }
+
+  .pricing-section .regular { font-size:26px; }
+  .pricing-section .offer { font-size:32px; }
+}
+.deliver-man {
+  text-align: center;
+  background-color: #000;
+  padding: 20px;
+}
+.deliver-man h2 {
+   color: #ffff00;
+   line-height: 42px;
+   font-weight: 600;
+}
+.deliver-man h2 span {
+  color: #fff;
+  text-decoration: underline;
+  color: #ffffff;
+}
+.video_VideoPlayers__KZnPY iframe{
+  width: 357px !important;
+  height: 476px !important;
+}
+@media screen and (max-width: 767px){
+  .c-video h2 {
+    font-size: 32px;
+  }
+  .video_VideoPlayers__KZnPY iframe{
+    width: 98% !important;
+    height:417px !important;
+  
+  }
+}
+
+</style>
+
+<section class="row c-video">
+  <h2>বাচ্চার প্রস্রাবের বিছানা ভেজার <span style="color: red;">ঝামেলা আর কতদিন!<svg class="c-hrline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M5,125.4c30.5-3.8,137.9-7.6,177.3-7.6c117.2,0,252.2,4.7,312.7,7.6"></path><path d="M26.9,143.8c55.1-6.1,126-6.3,162.2-6.1c46.5,0.2,203.9,3.2,268.9,6.4"></path></svg></span></h2>
+
+   <div class="Landing__37__Video">
+      <div class="VideoPlay">
+         <div id="VideoPlayers" class="video_VideoPlayers__KZnPY">
+            <div style="width: 640px; height: 360px;">
+               <div style="width: 100%; height: 100%;"><iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1363006065550251%2F&show_text=false&width=357&t=0" width="357" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe></div>
+            </div>
+         </div>
+      </div>
+    </div>
+
+    <p>কম দামে, <span style="color: red;">নকল ওয়াটারপ্রুফ বিছানার চাদর কিনে লস করতে না চাইলে</span> ভিডিওটি সম্পূর্ণ দেখুন</p>
+
+      <div class="elementor-button-wrapper">
+         <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+            <span class="elementor-button-content-wrapper">
+               <span class="elementor-button-icon">
+                  <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                  </svg>
+               </span>
+               <span class="elementor-button-text">অর্ডার করতে চাই</span>
+            </span>
+         </a>
+      </div>
+
+    <h3>আর নয় রেক্সিন ! এখন থেকে 3D <span style="color: red;">ওয়াটারপ্রুফ বিছানার চাদর।</span></h3>
+</section>
+
+<!-- === Custom Slider Start === -->
+<div class="row">
+  <div class="custom-slider-container">
+
+    <button class="c-nav prev">&#10094;</button>
+
+   <div class="custom-slider" id="customSlider">
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/01.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/02.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/03.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/04.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/05.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/06.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/07.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/08.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/09.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/10.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/11.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/12.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/13.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/14.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/15.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/16.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/17.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/18.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/19.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/20.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/21.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/22.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/23.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/24.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/25.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/26.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/27.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/28.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/29.jpg"></div>
+      <div class="slide"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/innsaf.com/catalog/ptblock/30.jpg"></div>
+  </div>
+
+
+    <button class="c-nav next">&#10095;</button>
+
+  </div>
+  <div class="mt-2 mb-2">
+    <img src="https://foodbari.com/wp-content/uploads/2025/10/coolllll-red-1.png" alt="" class="code-img">
+      <div class="elementor-button-wrapper">
+         <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+            <span class="elementor-button-content-wrapper">
+               <span class="elementor-button-icon">
+                  <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                  </svg>
+               </span>
+               <span class="elementor-button-text">অর্ডার করতে চাই</span>
+            </span>
+         </a>
+      </div>
+  </div>
+</div>
+<!-- === Benefit Section Start === -->
+<section class="benefit-section">
+  <h2>এই ওয়াটারপ্রুফ চাদর ব্যবহার করে যে সমস্যাগুলো 
+    <br>
+    <span>থেকে উপকার পাবেন<svg class="c-hrline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M5,125.4c30.5-3.8,137.9-7.6,177.3-7.6c117.2,0,252.2,4.7,312.7,7.6"></path><path d="M26.9,143.8c55.1-6.1,126-6.3,162.2-6.1c46.5,0.2,203.9,3.2,268.9,6.4"></path></svg></span></h2>
+
+  <ul>
+    <li><i class="fa-solid fa-check-circle"></i> ৮০% পর্যন্ত ঘাম শোষণ কমে যাবে।</li>
+    <li><i class="fa-solid fa-check-circle"></i> বাচ্চা বিছানা ভিজালেও ম্যাট্রেস ক্ষতিগ্রস্ত হবে না।</li>
+    <li><i class="fa-solid fa-check-circle"></i> রেক্সিনের মতো তাপ বা এলার্জি করবে না।</li>
+    <li><i class="fa-solid fa-check-circle"></i> কাপড়ের মতো নরম, আরামদায়ক ও সারা বছর ব্যবহারযোগ্য।</li>
+    <li><i class="fa-solid fa-check-circle"></i> খুব সহজে ধুয়ে শুকানো যায়।</li>
+  </ul>
+
+ <div class="elementor-button-wrapper">
+         <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+            <span class="elementor-button-content-wrapper">
+               <span class="elementor-button-icon">
+                  <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                  </svg>
+               </span>
+               <span class="elementor-button-text">অর্ডার করতে চাই</span>
+            </span>
+         </a>
+      </div>
+</section>
+<!-- === Benefit Section End === -->
+<section class="deliver-man">
+  <h2><span>১০০% ওয়াটারপ্রুফ হবে এবং ১০০% কালার গ্যারান্টি</span> ডেলিভারি ম্যানের সামনে পানি দিয়ে চেক করে নিতে পারবেন।</h2>
+</section>
+<!-- === Pricing Section Start === -->
+<section class="pricing-section">
+  <h2>১০০% ওয়াটারপ্রুফ + ১০০% কালার গ্যারান্টি</h2>
+
+  <p class="size"><i class="fa-solid fa-ruler-horizontal"></i> সাইজ: ৭ ফিট × ৮ ফিট</p>
+
+  <h3 class="regular"><i class="fa-solid fa-tag"></i> শুধু বেডশিট প্রাইস ১৪৫০৳ 
+    <!-- টাকারেগুলার প্রাইস 2600৳ -->
+  </h3>
+  <h3 class="offer"><i class="fa-solid fa-bolt"></i> 
+   কভার বেডশিট  প্রাইস ১,৭৫০৳
+  </h3>
+
+  <div class="btn-wrap" style="cursor: pointer;">
+    <a href="tel:01627576171">
+      <i class="fa-solid fa-phone-volume"></i> এখনই অর্ডার করুন
+    </a>
+  </div>
+</section>
+<!-- === Pricing Section End === -->
+
+
+<script>
+$(document).ready(function () {
+const slider = document.getElementById("customSlider");
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let index = 0;
+let slideWidth = slides[0].clientWidth;
+
+// Recalculate width on resize (important)
+window.addEventListener("resize", () => {
+  slideWidth = slides[0].clientWidth;
+  updateSlide();
+});
+
+// Update slide position
+function updateSlide() {
+  slider.style.transform = `translateX(${-index * slideWidth}px)`;
+}
+
+// Next slide
+function nextSlide() {
+  index++;
+  if (index >= slides.length) {
+    index = 0;
+  }
+  updateSlide();
+}
+
+// Previous slide
+function prevSlide() {
+  index--;
+  if (index < 0) {
+    index = slides.length - 1;
+  }
+  updateSlide();
+}
+
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+// Auto slide every 2 seconds
+let autoSlide = setInterval(nextSlide, 2000);
+
+// Stop autoplay while hovering
+slider.addEventListener("mouseenter", () => clearInterval(autoSlide));
+slider.addEventListener("mouseleave", () => autoSlide = setInterval(nextSlide, 2000));
+});
+</script>
+

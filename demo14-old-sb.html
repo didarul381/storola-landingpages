@@ -1,0 +1,150 @@
+<!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<style>
+    .desktop{
+        display: block;
+    }
+    .mobile{
+        display: none;
+    }
+    .custom-title{
+        font-size: 19px;
+        text-align: center;
+    }
+    .custom-hr{
+        position: relative;
+        border: 2px solid #d9d9d9;
+        margin-right: 9px; 
+    }
+    .custom-line{
+        position: absolute;
+        width: 309px;
+        height: 4px;
+        background: #a98153;
+        margin-top: -24px !important;
+        margin: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .margin-bottom{
+        margin-bottom: 8px;
+    }
+    @media screen and (max-width: 767px){
+        .desktop{
+            display: none;
+        }
+        .mobile{
+            display: block;
+        }
+        .custom-hr{
+            margin-right: 0;
+        }
+        .custom-title {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .custom-line{
+           width: 100px;
+            
+        }
+        .swiper-slide img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        
+
+    }
+</style>
+<!-- for deskstop view -->
+<div class="container pt-block static-top-store1 desktop">
+    <h3 class=" custom-title text-center font-weight-bold mb-4">DON'T MISS OUR MOST LOVED CATEGORIES</h3>
+    <hr class="custom-hr">
+    <div class="custom-line"></div>
+    <div class="row desktop">
+        <div class="col-md-3" style="padding-right: 2px; padding-left: 2px;">
+            <div class="row">
+               <div class="col-1">
+                 <a href="#"> <img src="image/catalog/ptblock/img1.jpg" class="img-fluid" alt="New Arrivals"></a>
+               </div>
+            </div>
+        </div>
+        <div class="col-md-9 mb-2" style="padding-right: 5px; padding-left: 5px; ">
+            <div class="row">
+                <div class="col-md-4  margin-bottom" style="padding-right: 5px; padding-left: 5px; ">
+                    <a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Hijab &amp; Niqab"></a>
+                </div>
+                <div class="col-md-4 margin-bottom" style="padding-right: 5px; padding-left: 5px; ">
+                    <a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Luxurious Abayas"></a>
+                </div>
+                <div class="col-md-4  margin-bottom" style="padding-right: 5px; padding-left: 5px; ">
+                    <a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Luxurious Abayas"></a>
+                </div>
+                <div class="col-md-4  margin-bottom" style="padding-right: 5px; padding-left: 5px; ">
+                    <a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Luxurious Abayas"></a>
+                </div>
+                <div class="col-md-4  margin-bottom" style="padding-right: 5px; padding-left: 5px; ">
+                    <a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Luxurious Abayas"></a>
+                </div>
+                <div class="col-md-4  margin-bottom" style="padding-right: 5px; padding-left: 5px; ">
+                    <a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Luxurious Abayas"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- for deskstop end -->
+
+<div class="container pt-block static-top-store1 mobile">
+    <div class="row">
+        <h3 class="custom-title text-center font-weight-bold mb-4">DON'T MISS OUR MOST LOVED CATEGORIES</h3>
+        <hr class="custom-hr">
+        <div class="custom-line"></div>
+    </div>
+
+    <!-- Swiper Slider -->
+    <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-grid swiper-grid-column">
+        <div class="swiper-wrapper" style="transition-duration: 0ms; transition-delay: 0ms;">
+            <div class="swiper-slide"><a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Hijab &amp; Niqab"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Hijab &amp; Niqab"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Hijab &amp; Niqab"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Hijab &amp; Niqab"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Hijab &amp; Niqab"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="image/catalog/ptblock/img2.jpg" class="img-fluid" alt="Hijab &amp; Niqab"></a></div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Include Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        speed: 3000,
+        lazy: true, 
+        slidesPerView: 1, 
+        grid: { rows: 2 }, 
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        allowTouchMove: true, 
+        navigation: false,
+        breakpoints: {
+            1499: { slidesPerView: 4, grid: { rows: 2 } },
+            1199: { slidesPerView: 3, grid: { rows: 2 } },
+            991: { slidesPerView: 3, grid: { rows: 2 } },
+            767: { slidesPerView: 3, grid: { rows: 2 } },
+            567: { slidesPerView: 2, grid: { rows: 2 } },
+            359: { slidesPerView: 2, grid: { rows: 1 } },
+        },
+    });
+});
+
+</script>

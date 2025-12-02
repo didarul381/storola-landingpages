@@ -1,0 +1,109 @@
+<style>
+    .m-home {
+    margin-top: 50px;
+}
+
+    .store-finder {
+    background: linear-gradient(125deg, #0bc1e9, #3749bb, #00237e);
+    animation: gradient 15s 
+     ease infinite;
+    color: #fff;
+}
+@keyframes gradient {
+    0% {
+    background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+.d-fc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.material-icons.lg {
+    height: 48px;
+    width: 48px;
+    font-size: 48px;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+.store-finder .txt h3 {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 5px;
+}
+.store-finder .txt p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+.store-finder .btn.find {
+    background: #EF9919;
+    padding: 17px 50px;
+    border-radius: 50px;
+    font-size: 15px;
+    line-height: 20px;
+    height: auto;
+    border: none;
+    width: fit-content;
+    margin-left: auto;
+    color: black;
+}
+.ws-box {
+    /* background: #fff; */
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.p-30 {
+    padding: 30px;
+}
+@media screen and (max-width: 767px){
+    .store-finder .txt h3 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .store-finder .txt p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .store-finder .btn.find {
+        padding: 12px 30px;
+        font-size: 13px;
+    }
+    .store-finder .btn.find {
+        margin: 0 auto !important;
+    }
+}
+</style>
+<div class="m-home store-finder ws-box p-30">
+   <div class="row" style="align-items: center">
+      <div class="col-md-7 col-sm-12 info d-fc">
+         <div class="ic"><i class="material-icons lg">place</i></div>
+         <div class="txt">
+            <h3>20+ Physical Stores</h3>
+            <p>Visit Our Store &amp; Get Your Desired IT Product!</p>
+         </div>
+      </div>
+      <div class="col-md-5 col-sm-12 store-find"><a href="https://demo3.storola.com/index.php?route=information/contact&language=en-gb" class="btn find d-fc">Find Our Store<i class="material-icons">search</i></a></div>
+   </div>
+</div>

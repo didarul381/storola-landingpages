@@ -1,0 +1,149 @@
+<!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<style>
+/* --- Base layout --- */
+.hatil-section {
+    /* padding: 60px 0; */
+}
+.hatil-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%; */
+}
+.hatil-content {
+    text-align: right;
+    padding-right: 15px;
+    max-width: 500px;
+}
+.hatil-content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 20px;
+}
+.hatil-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+.hatil-content a {
+    display: inline-block;
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+    border-bottom: 1px solid #222;
+    text-decoration: none;
+}
+.hatil-content a:hover {
+    color: #a98153;
+    border-color: #a98153;
+}
+
+/* --- Swiper styles --- */
+
+.hatil-swiper img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.swiper-button-next, .swiper-button-prev{
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 0 2px 8px 0 rgba(99, 99, 99, .2);
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+
+}
+.swiper-button-next:before, .swiper-button-prev:before {
+    
+    font-size: 14px;
+    color: black;
+    font-weight: 700;
+}
+/* --- Responsive --- */
+@media (max-width: 991px) {
+    .hatil-content {
+        text-align: left;
+        padding-left: 5px;
+    }
+    .hatil-left {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+   
+}
+</style>
+
+<!-- ======= HATIL Section ======= -->
+<div class="hatil-section mt-5">
+    <div class="row align-items-center">
+        <!-- Left Side: Text -->
+        <div class="col-md-5 hatil-left">
+            <div class="hatil-content">
+                <h2>Latest HATIL shorts</h2>
+                <p>
+                    Take a glance and grab ideas from the artistic frames of HATIL.
+                </p>
+                <a href="#">Explore to view more interior ideas</a>
+            </div>
+        </div>
+
+        <!-- Right Side: Swiper Gallery -->
+        <div class="col-md-7">
+            <div class="swiper hatil-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/"><img src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/HomePageImage/04.webp" alt="HATIL Image 1"></a>
+                    </div>
+                    <div class="swiper-slide">
+                       <a href="/"> <img src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/HomePageImage/05.webp" alt="HATIL Image 2"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/"><img src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/HomePageImage/06.webp" alt="HATIL Image 3"></a>
+                    </div>
+                    <div class="swiper-slide">
+                       <a href="/"> <img src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/HomePageImage/06.webp" alt="HATIL Image 3"></a>
+                    </div>
+                    <div class="swiper-slide">
+                       <a href="/"> <img src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/HomePageImage/06.webp" alt="HATIL Image 3"></a>
+                    </div>
+                </div>
+                <!-- Optional navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".hatil-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: false,
+        autoplay:false,
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: false,
+        // },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        speed: 1000,
+        breakpoints: {
+            320: { slidesPerView: 2 },
+            768: { slidesPerView: 2 },
+            1200: { slidesPerView: 3 }
+        }
+    });
+});
+</script>

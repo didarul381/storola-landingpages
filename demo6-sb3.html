@@ -1,0 +1,152 @@
+<style>
+.hatil-left {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+.hatil-content1 p,
+.hatil-content1 a {
+  font-size: 16px;
+  color: #555;
+}
+
+.border-title-grey-bottom {
+  border-bottom: 1px solid #2d2d2d;
+  padding-bottom: 0.5rem !important;
+}
+
+/* ✅ Image container */
+.hatil-image-box1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.hatil-image-box1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* ✅ Overlay hidden by default */
+.category-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/* ✅ Centered text inside overlay */
+.category-border-white {
+  border: 1px solid #fff;
+}
+
+/* ✅ Hover effect — show overlay */
+.hatil-image-box1:hover .category-name {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hatil-image-box1:hover img {
+  transform: scale(1.08);
+}
+</style>
+
+<div class="row my-4">
+  <div class="col-md-4 hatil-left">
+    <div class="hatil-content1">
+      <h2>Creations with purpose</h2>
+      <p>Many choices based on your space.</p>
+      <a href="#">Explore <span class="border-title-grey-bottom pb-md-2 pb-1">Now</span></a>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="row">
+      <!-- Image 1 -->
+      <div class="col-md-4 mb-3">
+        <div class="image hatil-image-box1">
+          <a href="#">
+            <img src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/HomePageImage/Bed_417x425_Jan24.webp" alt="HATIL Image 1">
+          </a>
+          <div class="category-name h-100 w-100 p-xl-5 p-lg-4 p-3">
+            <div class="category-border-white d-flex h-100 w-100">
+              <p class="text-center my-auto mx-auto">Bed Room</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="col-md-4 mb-3">
+        <div class="image hatil-image-box1">
+          <a href="#">
+            <img src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/HomePageImage/BossTable_417x425_Jan24.webp" alt="HATIL Image 2">
+          </a>
+          <div class="category-name h-100 w-100 p-xl-5 p-lg-4 p-3">
+            <div class="category-border-white d-flex h-100 w-100">
+              <p class="text-center my-auto mx-auto">Office Table</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="col-md-4 mb-3">
+        <div class="image hatil-image-box1">
+          <a href="#">
+            <img src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/HomePageImage/Bed_417x425_Jan24.webp" alt="HATIL Image 3">
+          </a>
+          <div class="category-name h-100 w-100 p-xl-5 p-lg-4 p-3">
+            <div class="category-border-white d-flex h-100 w-100">
+              <p class="text-center my-auto mx-auto">Living Room</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="image hatil-image-box1">
+          <a href="#">
+            <img src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/HomePageImage/Bed_417x425_Jan24.webp" alt="HATIL Image 3">
+          </a>
+          <div class="category-name h-100 w-100 p-xl-5 p-lg-4 p-3">
+            <div class="category-border-white d-flex h-100 w-100">
+              <p class="text-center my-auto mx-auto">Living Room</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="image hatil-image-box1">
+          <a href="#">
+            <img src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/HomePageImage/Bed_417x425_Jan24.webp" alt="HATIL Image 3">
+          </a>
+          <div class="category-name h-100 w-100 p-xl-5 p-lg-4 p-3">
+            <div class="category-border-white d-flex h-100 w-100">
+              <p class="text-center my-auto mx-auto">Living Room</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="image hatil-image-box1">
+          <a href="#">
+            <img src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/HomePageImage/Bed_417x425_Jan24.webp" alt="HATIL Image 3">
+          </a>
+          <div class="category-name h-100 w-100 p-xl-5 p-lg-4 p-3">
+            <div class="category-border-white d-flex h-100 w-100">
+              <p class="text-center my-auto mx-auto">Living Room</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more images as needed -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,622 @@
+<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+    .fade-up {
+       opacity: 0;
+       transform: translateY(20px);
+       animation: fadeUp 0.8s ease-out forwards;
+   }
+
+   /* Delay the animation for each section */
+   .fade-up:nth-child(1) {
+       animation-delay: 0.2s;
+   }
+
+   .fade-up:nth-child(2) {
+       animation-delay: 0.4s;
+   }
+
+   .fade-up:nth-child(3) {
+       animation-delay: 0.6s;
+   }
+
+   @keyframes fadeUp {
+       to {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   }
+
+   .landing .d-flex{
+     display: flex;
+     justify-content: center;
+   }
+   .landing .title{
+      font-family: "Anek Bangla", Sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: #fb3434;
+   }
+   .landing .sub-title{
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .45);
+   }
+   .landing .desc{
+    font-size: 16px;
+    line-height: 26px;
+    padding: 10px 15px;
+   }
+   .landing .discount{
+     margin: 10px 5px;
+   }
+   .price-container {
+      padding: 10px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "SolaimanLipi", sans-serif;
+    }
+   .new-price {
+       font-size: 30px;
+       color: #066a3c;
+       font-weight: bold;
+   }
+   .old-price {
+       font-size: 30px;
+       color: #333;
+       position: relative;
+       margin-left: 20px;
+       font-weight: bold;
+   }
+   .strike-through {
+      height: calc(100% + 20px);
+      left: 50%;
+      overflow: visible;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 20px);
+   }
+   .strike-through svg {
+       width: 100%;
+       height: 100%;
+   }
+   .strike-through path {
+       stroke: red;
+       stroke-width: 10;
+       fill: none;
+   }
+ .main-content{
+  font-family: "Hind Siliguri", sans-serif !important;
+  }
+   /* for countdown */
+   .main-cont{
+       /* height: 100vh; */
+       width: 100%;
+       align-items: center;
+       justify-content: center;
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+       color: #fe3b03;
+       font-family: "Hind Siliguri", sans-serif;
+       background-size: cover;
+       background-repeat: no-repeat;
+       /* font-size: 1.5rem; */
+       text-transform: uppercase;
+    
+    }
+    .cut{
+    
+    display: flex;
+    text-align: center;
+    }
+    .cut>div{
+      width: 220px;
+      padding: 40px 0px;
+      margin: 10px;
+      /* background-color: rgba(0, 0, 0, 0.5); */
+      box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+      font-weight: 500;
+      font-size: 42px;
+      /* border-radius: 10px 10px 10px 10px; */
+    }
+    .cut>div>span{
+       /* font: 1em sans-serif; */
+       font-size: 42px;
+    }
+    /* button */
+    .elementor-button-wrapper{
+       text-align: center;
+       margin: 10px 3px;
+       position: relative;
+       z-index: 2;
+    }
+    .elementor-button {
+       display: inline-block;
+       line-height: 1;
+       font-size: 26px;
+       font-weight: 600;
+       padding: 15px 30px;
+       color: #fff;
+       fill: #fff;
+       text-align: center;
+       transition: all .3s;
+       background-color: #E2860C;
+       border-style: solid;
+       border-radius: 30px;
+    }
+    /* Hover Animation */
+    .elementor-animation-up-down:hover {
+       animation: upDown 0.5s ease-in-out infinite;
+    }
+    /* Up-Down Keyframes */
+    @keyframes upDown {
+       0%, 100% {
+           transform: translateY(0);
+       }
+       50% {
+           transform: translateY(-10px);
+       }
+    }
+    /* Hover Background Color Change */
+    .elementor-button:hover {
+       background-color: #DA810D;
+       color: #fff;
+    }
+     /* button  ends */
+     /* .swiper-slide img {
+          width: 100%;
+          height: auto;
+          display: block;
+        } */
+          /* List */
+    .benefits {
+        /* max-width: 750px; */
+        /* margin: 0 auto; */
+        /* padding-left: 5px; */
+        text-align: left;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #333;
+    }
+    .benefits li {
+        list-style: none;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    .benefits li i {
+        color: #f05a26;
+        margin-right: 8px;
+    }
+    /* .divider{
+        position: absolute;
+    } */
+     .sec-3{
+         display: flex;
+         align-items: center;
+     }
+     .elementor-5641 .elementor-element.elementor-element-f60fa05 .elementor-button {
+        background-color: #f16334;
+        font-family: "Anek Bangla", Sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .accordion {
+            /* width: 100%;
+            max-width: 600px; */
+            padding: 10px;
+            margin: auto;
+        }
+        .accordion-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .accordion-header {
+            background: #f7f7f7;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-body {
+            display: none;
+            padding: 15px;
+            background: #fff;
+        }
+        .active .accordion-body {
+            display: block;
+        }
+        .icon {
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+        .active .icon {
+            transform: rotate(180deg);
+        }
+        .grid{
+            display: grid;
+            gap: 5px;
+            padding-left: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        @media screen and (max-width: 767px){
+        .landing .title{
+            font-size: 18px;
+            line-height: 1.4;
+               
+        }
+        .landing .sub-title{
+         text-shadow: 0px 0px 10px rgba(0, 0, 0, .45);
+        }
+        .landing .desc{
+         font-size: 16px;
+         line-height: 22px;
+        }
+        .sec-3{
+            flex-direction: column;
+        }
+        .cut>div{
+             width: 80px;
+             padding: 35px 0px;
+            
+        }
+        .benefits{
+            padding: 15px;
+        }
+        .mobile-m{
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .elementor-button {
+            font-size: 16px;
+        }
+        .accordion {
+            padding: 7px;
+        }
+        .grid {
+          padding: 5px;
+          grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+        }
+    }
+</style>
+<style>
+   
+
+/* Up-Down Keyframes */
+@keyframes upDown {
+   0%, 100% {
+       transform: translateY(0);
+   }
+   50% {
+       transform: translateY(-10px);
+   }
+}
+/* Hover Background Color Change */
+.elementor-button:hover {
+   background-color: #0056b3;
+   color: #fff;
+}
+.elementor-shape-bottom{
+      
+   position: absolute;
+   width: 100%;bottom: -16px;
+   fill: #fff;
+   transform-origin: center;
+   transform: rotate(180deg);
+}
+.sec2-elementor-widget-container{
+   display: flex;
+   justify-content: space-around;
+   padding: 20px 5px;
+}
+.elementor-icon-list-items{
+    text-align: justify;
+}
+  
+.elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+   padding-bottom: calc(50px / 2);
+}
+.elementor-widget .elementor-icon-list-item, .elementor-widget .elementor-icon-list-item a {
+   display: flex;
+   font-size: inherit;
+   align-items: var(--icon-vertical-align, center);
+}
+.elementor-icon-list-text {
+    color: #000000;
+    transition: color 0.3s;
+}
+.elementor-icon-list-item{
+   color: #54595F;
+   font-size: 19px;
+   font-weight: 400;
+}
+.carousel-indicators li {
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background-color: #007bff; /* Default color */
+border: none;
+margin: 0 5px;
+}
+.background {
+/* background-color: #000000; */
+/* background: linear-gradient(to bottom, #282727, #000); */
+background: linear-gradient(to bottom, #53a97a, #176239);
+color: #fff !important;
+/* border-top: 1px solid gray; */
+}
+
+
+.Landing__35__Banner {
+  position: relative;
+}
+.Landing__35__Banner__img {
+  width: 100%;
+  height: 900px;
+  object-fit: cover;
+}
+.Landing__35__Banner__Content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.justify-content-center {
+ justify-content: center !important;
+}
+.Landing__35__Banner__Text__Span {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    line-height: normal;
+    background-color: hsla(16, 84%, 67%, .32);
+    font-weight: 500;
+    box-shadow: 0 8px 16px 0 rgba(27, 27, 27, .16);
+    padding: 15px 30px !important;
+    border-radius: 40px;
+    color: white !important;
+}
+.Landing__36__Banner__Text__Span {
+    font-family: "Hind Siliguri", Sans-serif;
+    font-weight: 700;
+    color: #000000;
+    font-size: 26px;
+}
+.Landing__35_h1 {
+ text-align: center;
+ color: #fff;
+ padding: 30px;
+ border-radius: 10px;
+}
+.Landing__35_h1 span {
+ color:#ffc300;
+ /* padding: 5px 15px; */
+ border-radius: 5px;
+ /* margin: 0 10px; */
+ display: inline-block;
+}
+.Landing__35__Banner__Text h4 span {
+color: #e7d920;
+}
+.Landing__35 h1, .Landing__35 h1 span {
+   font-size: 35px;
+   line-height: 48px;
+}
+.Landing__35__Banner__Text img {
+  max-height: 450px;
+  object-fit: cover;
+}
+.img-1{
+    width: 35%;
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    border-color: #FCB700;
+    border-radius: 10px 10px 10px 10px;
+}
+.Landing__35__Banner__Text h4 {
+  color: #fdfdfd;
+  text-align: center;
+  font-size: 37px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.custom-height{
+    height: 800px;
+}
+.custom-height img{
+   width: 100%;
+    object-fit: cover;
+    
+}
+.Landing__36__Banner{
+    position: relative;
+}
+.Landing__36__Banner__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.list{
+    background-color:  #f1c295;
+    padding: 20px;
+    border: 2px solid  #f9a659;
+    border-radius: 10px;
+}
+.attar-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    background-color:  #f1c295;
+    border: 2px solid  #f9a659;
+    border-radius: 10px;
+    margin: 20px;
+}
+.attar-list p{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+.price-hero{
+    width: 50%;
+    margin: 0 auto;
+}
+.price-list{
+    background-color: #fcf1e7;
+    margin-top: 5px;
+    padding: 5px;
+    border: 2px solid  #f9a659;
+    border-radius: 10px;
+    text-align: center;
+}
+.price, .mobile, .whatsapp{
+    font-size: 25px;
+    font-weight: 700;
+    font-family: "Hind Siliguri", Sans-serif;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    padding: 15px;
+    line-height: 1.4;
+}
+.common-border{
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    border-color: #FCB700;
+    border-radius: 10px 10px 10px 10px;
+}
+
+@media screen and (max-width: 767px){
+    .attar-list{
+        margin: 15px;
+    }
+    .Landing__35__Banner__Content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .img-1{
+        width: 85%;
+    }
+    .elementor-button-wrapper {
+        margin-bottom: 15px;
+    }
+    .Landing__35__Banner__Text img {
+        max-height: 275px;
+    }
+    .elementor-button {
+        font-size: 20px;
+    }
+   .static-top-store1 {
+       margin-top: -40px;
+   }
+   .sec-1{
+      flex-direction: column;
+   
+   }
+   .title-1{
+      padding-left: 7px;
+      padding-right: 7px;
+   }
+   .desc-1 {
+       text-align: center;
+   }
+   .Landing__35__Banner__Text{
+       margin-top: 35px;
+   }
+   .Landing__35__Banner__img {
+       height: 600px;
+   }
+   .Landing__35__Banner__Text__Span{
+      font-size: 16px;
+      font-weight: 600;
+      padding: 15px 15px !important;
+   }
+   .Landing__35_h1 {
+      padding: 15px;
+      font-size: 22px;
+      line-height: 28px;
+   }
+   .Landing__35__Banner__Text h4 {
+       font-size: 26px;
+       line-height: 30px;
+   }
+   .list{
+       padding: 10px;
+   }
+   .price-hero{
+       width: 100%;
+   }
+   .price, .mobile, .whatsapp{
+         font-size: 18px;
+   }
+}
+
+
+</style>
+
+ <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/kushtiamart.com/catalog/slider/slider.png" style="width: 100%;"> 
+       
+  
+    
+ </p><div class="row" style="margin: 20px 0; text-align: center;">   
+       
+        <div class="col-md-6">
+          <div class="card" style="margin:10px 0">
+             <h3 class="discount" style=""><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/kushtiamart.com/catalog/ptblock/Dolnavally6.png" style="width: 600px;"><font color="#b56308"><span style="font-size: 24px;"><br></span></font></h3><h3 class="discount" style=""><span style="font-size: 24px;"><b>২৬ পিসের খেলনা সেট</b></span></h3>
+          
+           
+            
+              <div class="elementor-button-wrapper">
+                 <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                       <i aria-hidden="true" class="icon icon-bag"></i></span>
+                       <span class="elementor-button-text">অর্ডার করতে চাই<i style="font-size: 22px;
+                         margin-left: 3px;" class="fa fa-angle-double-right"></i></span>
+                    </span>
+                 </a>
+             </div> 
+          </div>
+        </div>
+        
+      
+          <div class="col-md-6">
+          <div class="card" style="margin:10px 0">
+             <h3 class="discount" style="font-family: &quot;Open Sans&quot;, sans-serif;"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/kushtiamart.com/catalog/ptblock/Dolnavally7.png" style="width: 600px;"><font color="#b56308"><font style=""><span style="font-size: 24px;"><br></span></font></font></h3><h3 class="discount" style=""><font face="Open Sans, sans-serif"><span style="font-size: 24px;"><b>৩৬ পিসের খেলনা সেট</b></span></font></h3>
+          
+           
+             <div class="elementor-button-wrapper">
+                 <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+                     <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-icon">
+                       <i aria-hidden="true" class="icon icon-bag"></i></span>
+                       <span class="elementor-button-text">অর্ডার করতে চাই<i style="font-size: 22px;
+                         margin-left: 3px;" class="fa fa-angle-double-right"></i></span>
+                    </span>
+                 </a>
+             </div>
+          </div>
+        </div>
+       
+          </div>
+        
+    
+
+<p></p>

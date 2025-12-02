@@ -1,0 +1,83 @@
+<style>
+.custom-title{
+    color: #fff;
+}
+.custom-desc{
+    color: #fff;
+    font-size: 16px;
+}
+.static-slide a{
+  border: 1px solid #ffff;
+  border-radius: 10px;
+}
+.static-slide .swiper-button-prev, .static-slide .swiper-button-next{
+    border: 1px solid #fff;
+    background: radial-gradient(rgb(233, 230, 230), transparent);
+}
+.static-slide .swiper-slide img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+</style>
+
+<div class="container mt-4" style="margin-top: 20px;">
+    <div class="swiper-container static-slide">
+        <div class="swiper-wrapper">
+            <!-- Slide 1: Cash On Delivery -->
+            <div class="swiper-slide">
+                	<img src="image/catalog/ptblock/b1.png" alt="block3">
+                <!-- <h4 class="custom-title"><span style="font-size: 18px;">Express Delivery</span></h4><span style="font-size: 18px;">
+                </span><p class="custom-desc"><span style="font-size: 12px;">With selected items</span></p><span style="font-size: 12px;">
+                </span><a href="#" class="btn btn-light">Save Now</a> -->
+            </div>
+
+            <!-- Slide 2: Gift Voucher -->
+            <div class="swiper-slide">
+                <img src="image/catalog/ptblock/b2.png" alt="block3">
+            </div>
+
+            <!-- Slide 3: Free Delivery -->
+            <div class="swiper-slide">
+               <img src="image/catalog/ptblock/b3.png" alt="block3">
+            </div>
+            <!-- Slide 3: Free Delivery -->
+            <div class="swiper-slide">
+               <img src="image/catalog/ptblock/b4.png" alt="block3">
+            </div>
+        </div>
+
+        <!-- Navigation a heref=""s -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var swiper = new Swiper(".static-slide", {
+            spaceBetween: 20,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            speed: 4000,
+            slidesPerView: 4,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            breakpoints: {
+                1499: { slidesPerView: 4 },
+                1199: { slidesPerView: 4 },
+                991: { slidesPerView: 3 },
+                767: { slidesPerView: 2 },
+                479: { slidesPerView: 1 }
+            }
+        });
+    });
+</script>

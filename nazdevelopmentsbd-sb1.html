@@ -1,0 +1,127 @@
+<style>
+.business-category {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns: left & right */
+  gap: 12px;
+}
+
+.left-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.right-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+}
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.05);
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%); /* centers horizontally */
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #d6b500;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    transition: all 0.3s ease;
+}
+
+.image-box:hover .overlay-text {
+  background: #d6b500;
+  color: #fff;
+  border-color: #d6b500;
+}
+.c-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.c-t1{
+    margin-bottom: 40px !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .business-category {
+    grid-template-columns: 1fr; /* Stack vertically */
+  }
+
+  .right-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .overlay-text {
+    font-size: 6.5px !important;;
+    padding: 0px 7px !important;;
+  }
+}
+</style>
+
+<section>
+    <h2 class="c-title c-t1">Business Furniture Collections</h2>
+    <div class="business-category">
+      <!-- Left Large Image -->
+      <div class="left-image image-box">
+        <a href="#">
+          <img src="https://www.fitmentcraft.com/cdn/shop/files/zenith-env02.png?v=1761916609&amp;width=940" alt="Executive Desks">
+          <span class="overlay-text">EXECUTIVE DESKS</span>
+        </a>
+      </div>
+    
+      <!-- Right 4-Image Grid -->
+      <div class="right-grid">
+        <div class="image-box">
+          <a href="#">
+            <img src="https://www.fitmentcraft.com/cdn/shop/files/cabinet.png?v=1760279977&amp;width=533" alt="Business Storage">
+            <span class="overlay-text">BUSINESS STORAGE</span>
+          </a>
+        </div>
+        <div class="image-box">
+          <a href="#">
+            <img src="https://www.fitmentcraft.com/cdn/shop/files/cabinet.png?v=1760279977&amp;width=533" alt="Office Chairs">
+            <span class="overlay-text">OFFICE CHAIRS</span>
+          </a>
+        </div>
+        <div class="image-box">
+          <a href="#">
+            <img src="https://www.fitmentcraft.com/cdn/shop/files/cabinet.png?v=1760279977&amp;width=533" alt="Workstations">
+            <span class="overlay-text">WORKSTATIONS</span>
+          </a>
+        </div>
+        <div class="image-box">
+          <a href="#">
+            <img src="https://www.fitmentcraft.com/cdn/shop/files/cabinet.png?v=1760279977&amp;width=533" alt="Shop Now">
+            <span class="overlay-text">SHOP NOW</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+</section>
