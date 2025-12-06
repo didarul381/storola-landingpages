@@ -1,0 +1,928 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+   /* =========================
+   TITLE UNDERLINE ANIMATION
+   ========================= */
+   .benefit-section h2 span {
+   position: relative;
+   display: inline-block;
+   }
+   /* SVG Base */
+   .c-hrline {
+   width: calc(100% + 20px);
+   display: block;
+   margin: -78px auto 0;
+   }
+   .c-hrline path {
+   fill: none;
+   stroke: #b5462f;
+   stroke-width: 3px;
+   stroke-linecap: round;
+   stroke-dasharray: 500;
+   stroke-dashoffset: 500;
+   animation: line-draw 1.5s ease-in-out infinite;
+   }
+   /* Infinite wave draw effect */
+   @keyframes line-draw {
+   0% {
+   stroke-dashoffset: 500;
+   }
+   50% {
+   stroke-dashoffset: 0;
+   }
+   100% {
+   stroke-dashoffset: 500;
+   }
+   }
+   /* =======================
+   CTA BUTTON
+   ======================= */
+   .elementor-button-wrapper {
+   text-align: center;
+   margin: 10px 3px;
+   position: relative;
+   z-index: 2;
+   }
+   .elementor-button {
+   display: inline-block;
+   line-height: 1;
+   font-size: 20px;
+   font-weight: 600;
+   padding: 15px 30px;
+   color: #fff;
+   fill: #fff;
+   text-align: center;
+   transition: all .3s;
+   background-color: #b5462f;
+   border-style: solid;
+   }
+   /* Hover Animation */
+   .elementor-animation-up-down:hover {
+   animation: upDown 0.5s ease-in-out infinite;
+   }
+   /* Up-Down Keyframes */
+   @keyframes upDown {
+   0%, 100% {
+   transform: translateY(0);
+   }
+   50% {
+   transform: translateY(-10px);
+   }
+   }
+   /* Hover Background Color Change */
+   .elementor-button:hover {
+   background-color: #b5462f;
+   color: #fff;
+   }
+   .elementor-button-icon .e-font-icon-svg {
+   height: 1em;
+   }
+   .elementor-button-icon svg {
+   width: 1em;
+   }
+   /* =======================
+   CUSTOM IMAGE SLIDER
+   ======================= */
+   .custom-slider-container {
+   touch-action: pan-y;
+   position: relative;
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto 20px;
+   padding: 10px 20px;
+   background: #ffffff;
+   overflow: hidden;
+   }
+   .custom-slider {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+   }
+   /* One slide */
+   .slide {
+   position: relative;
+   min-width: calc(100% / 3);
+   padding: 0 8px;
+   box-sizing: border-box;
+   }
+   .slide img {
+   width: 100%;
+   display: block;
+   border-radius: 6px;
+   object-fit: cover; /* keep aspect, no stretching */
+   }
+   /* Arrows */
+   .c-nav {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 36px;
+   height: 36px;
+   background: #ffffff;
+   border: none;
+   border-radius: 50%;
+   cursor: pointer;
+   z-index: 5;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 20px;
+   color: #333;
+   box-shadow: 0 3px 8px rgba(0,0,0,.25);
+   }
+   .prev {
+   left: 6px;
+   }
+   .next {
+   right: 6px;
+   }
+   /* Dots */
+   .slider-dots {
+   display: flex;
+   justify-content: center;
+   gap: 6px;
+   margin: 10px 0 0;
+   }
+   .slider-dot {
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   border: none;
+   background: #d3d3d3;
+   padding: 0;
+   cursor: pointer;
+   }
+   .slider-dot.active {
+   background: #000000;
+   }
+   /* Slider Responsive */
+   @media (max-width: 991px) {
+   .slide {
+   min-width: 50%;
+   }
+   }
+   @media (max-width: 575px) {
+   .custom-slider-container {
+   padding: 10px 12px;
+   }
+   .slide {
+   min-width: 100%;
+   }
+   }
+   /* Code image under slider */
+   .code-img {
+   display: flex;
+   margin: 0 auto;
+   padding-bottom: 15px;
+   }
+   /* =======================
+   BENEFIT SECTION
+   ======================= */
+   .benefit-section {
+   background: #fbe8e5;
+   padding: 40px 15px;
+   text-align: center;
+   }
+   .benefit-section h2 {
+   color: #5a4336;
+   font-size: 32px;
+   line-height: 42px;
+   font-weight: 600;
+   }
+   .benefit-section ul {
+   max-width: 900px;
+   margin: 25px auto;
+   font-size: 22px;
+   line-height: 34px;
+   list-style: none;
+   padding: 0;
+   text-align: left;
+   }
+   .benefit-section ul li {
+   margin-bottom: 12px;
+   line-height: 36px;
+   border-bottom: 2px solid #a4a6a9;
+   }
+   .benefit-section ul li i {
+   color: #5a4336;
+   margin-right: 6px;
+   }
+   .benefit-section .btn-wrap {
+   text-align: center;
+   margin-top: 20px;
+   }
+   .benefit-section .btn-wrap a {
+   background: #b5462f;
+   color: #fff;
+   padding: 14px 34px;
+   border-radius: 6px;
+   font-size: 20px;
+   display: inline-block;
+   }
+   /* =======================
+   PRICING SECTION (NEW)
+   ======================= */
+   .pricing-section {
+   background: #5a4336;          /* brown background */
+   color: #ffffff;
+   text-align: center;
+   padding: 30px 15px 35px;
+   margin: 0 auto 0px;
+   font-family: "Hind Siliguri", system-ui, -apple-system, sans-serif;
+   }
+   /* Top heading: আজই সংগ্রহ করে নিন */
+   .pricing-heading {
+   font-size: clamp(20px, 2vw + 6px, 30px);
+   font-weight: 700;
+   margin-bottom: 16px;
+   color:white;
+   }
+   /* Regular price line */
+   .pricing-regular {
+   font-size: clamp(18px, 1.8vw + 4px, 26px);
+   margin-bottom: 6px;
+   }
+   /* OLD PRICE: line draws left → right */
+   .old-price {
+   position: relative;
+   display: inline-block;
+   padding: 0 4px;
+   }
+   .old-price::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 50%;
+   height: 2px;
+   background: #ffffff;
+   transform-origin: left center;
+   transform: scaleX(0);                      /* start hidden */
+   animation: priceCut 0.8s ease-out 0.3s forwards;
+   }
+   @keyframes priceCut {
+   to {
+   transform: scaleX(1);                    /* full line */
+   }
+   }
+   /* “অফারের মূল্য” text */
+   .pricing-offer-label {
+   font-size: clamp(18px, 1.6vw + 4px, 24px);
+   margin-top: 6px;
+   }
+   /* OFFER AMOUNT: animated orange pill */
+   .pricing-offer-amount {
+   font-size: clamp(20px, 2.2vw + 6px, 32px);
+   font-weight: 700;
+   margin: 4px 0 14px;
+   }
+   .pricing-offer-amount span {
+   position: relative;
+   display: inline-block;
+   padding: 4px 16px;
+   border-radius: 999px;
+   color: #ffffff;
+   overflow: hidden;
+   }
+   /* pill grows around the text */
+   .pricing-offer-amount span::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   border-radius: inherit;
+   background: #f58b33;
+   transform: scale(0);                       /* start tiny */
+   transform-origin: center;
+   z-index: -1;
+   animation: priceHighlight 0.8s ease-out 0.9s forwards;
+   }
+   @keyframes priceHighlight {
+   to {
+   transform: scale(1);                     /* full pill */
+   }
+   }
+   /* Delivery line */
+   .pricing-delivery {
+   font-size: clamp(16px, 1.2vw + 4px, 20px);
+   margin-bottom: 14px;
+   }
+   /* Bottom white pill */
+   .pricing-badge {
+   display: inline-block;
+   padding: 7px 22px;
+   border-radius: 999px;
+   background: #ffffff;
+   color: #e53935;
+   font-weight: 700;
+   font-size: clamp(14px, 1.1vw + 2px, 18px);
+   }
+   /* =======================
+   DELIVER-MAN SECTION
+   ======================= */
+   .deliver-man {
+   text-align: center;
+   background-color: #000;
+   padding: 20px;
+   }
+   .deliver-man h2 {
+   color: #ffff00;
+   line-height: 42px;
+   font-weight: 600;
+   }
+   .deliver-man h2 span {
+   color: #ffffff;
+   text-decoration: underline;
+   }
+   /* =======================
+   GLOBAL RESPONSIVE
+   ======================= */
+   @media (max-width: 600px) {
+   .benefit-section h2,
+   .pricing-section h2 {
+   font-size: 26px;
+   line-height: 36px;
+   }
+   .benefit-section ul {
+   font-size: 18px;
+   line-height: 30px;
+   }
+   }
+   /* =======================
+   HIJAB STRIP BANNER
+   ======================= */
+   .hijab-strip {
+   background-color: #5a4336;
+   padding: 10px 0;
+   }
+   /* Box that holds text */
+   .hijab-banner {
+   color: #ffffff;
+   border-radius: 4px;
+   padding: 8px 12px;
+   text-align: center;
+   }
+   .hijab-title {
+   font-weight: 700;
+   line-height: 1.4;
+   margin-bottom: 4px;
+   font-size: clamp(20px, 2.2vw, 32px);
+   }
+   .hijab-subtitle {
+   line-height: 1.6;
+   margin: 0;
+   font-size: clamp(14px, 1.1vw + 2px, 18px);
+   }
+   .review-section {
+   padding: 40px 15px 50px;
+   background: #fbe8e5;
+   }
+   .review-wrapper {
+   max-width: 480px;
+   margin: 0 auto;
+   }
+   /* Top heading */
+   .review-title-top {
+   text-align: center;
+   font-weight: 700;
+   color: #a0523b;
+   font-size: clamp(20px, 2.4vw + 4px, 26px);
+   line-height: 1.4;
+   margin-bottom: 22px;
+   }
+   /* Brown panel */
+   .review-panel {
+   background: #4d342b;
+   border-radius: 22px;
+   padding: 22px 18px 60px;
+   position: relative;
+   color: #ffffff;
+   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+   }
+   .review-panel-title {
+   text-align: center;
+   font-weight: 700;
+   font-size: clamp(18px, 2vw + 2px, 22px);
+   margin-bottom: 18px;
+    color: #f8f8f8 !important;
+    text-shadow: 1px 1px 1px gray;
+   }
+   /* ========= SLIDER ========= */
+   .review-slider {
+   position: relative;
+   overflow: hidden;
+   }
+   .review-track {
+   display: flex;
+   transition: transform 0.45s ease-in-out;
+   }
+   .review-slide {
+   min-width: 100%;
+   padding: 0 4px;
+   box-sizing: border-box;
+   }
+   /* White review card */
+   .review-card {
+   background: #ffffff;
+   border-radius: 14px;
+   border: 3px solid #ff9d42;
+   padding: 12px 14px;
+   color: #333333;
+   font-size: 13px;
+   line-height: 1.5;
+   }
+   .review-user {
+   display: flex;
+   align-items: center;
+   margin-bottom: 6px;
+   font-weight: 600;
+   }
+   .review-avatar {
+   /* width: 32px; */
+   /* height: 32px; */
+   width: 100%;
+   /* border-radius: 50%; */
+   background: #ccc;
+   margin-right: 8px;
+   flex-shrink: 0;
+   }
+   .review-avatar img{
+   /* border-radius: 50%; */
+   width: 100%;
+    height: auto;
+   }
+   .review-meta {
+   font-size: 11px;
+   color: #777;
+   }
+   .review-body {
+   margin-top: 6px;
+   }
+   /* Slider arrows */
+   .rv-nav {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 34px;
+   height: 34px;
+   border-radius: 50%;
+   border: none;
+   background: #ffffff;
+   color: #4d342b;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 4px 10px rgba(0,0,0,.25);
+   cursor: pointer;
+   z-index: 10;
+   font-size: 16px;
+   }
+   .rv-prev {
+   left: 8px;
+   }
+   .rv-next {
+   right: 8px;
+   }
+   /* Small logo at bottom of panel (placeholder) */
+   .review-logo {
+   position: absolute;
+   bottom: 14px;
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 14px;
+   opacity: 0.7;
+   }
+   /* ========= CTA BUTTON ========= */
+   .review-cta-wrap {
+   text-align: center;
+   margin-top: 20px;
+   }
+   .review-cta-btn {
+   display: inline-block;
+   padding: 10px 28px;
+   border-radius: 999px;
+   background: #b5462f;
+   color: #ffffff;
+   border: 2px solid #ffcf9c;
+   font-weight: 700;
+   font-size: 16px;
+   text-decoration: none;
+   box-shadow: 0 6px 12px rgba(0,0,0,.18);
+   }
+   .review-cta-btn:hover {
+   color: #ffffff;
+   background: #a13b26;
+   }
+   @media (min-width: 768px) {
+   .review-panel {
+   padding: 26px 26px 70px;
+   }
+   .review-card {
+   font-size: 14px;
+   }
+   }
+</style>
+<!-- === Custom Slider Start === -->
+<!-- === Custom Slider Start === -->
+<div class="container-fluid hijab-strip">
+   <div class="container">
+      <div class="row justify-content-center">
+         <div class="col-12 col-md-10 col-lg-12">
+            <div class="hijab-banner text-center">
+               <div class="hijab-title">
+                  আফরাহ হিজাব - (Afrah Hijab) ||  ইনস্ট্যান্ট রেডি হিজাব+নিকাব সেট || লেয়ারে লেয়ারে ভালবাসা
+               </div>
+               <p class="hijab-subtitle">
+                  আফরাহ হিজাব - (Afrah Hijab) ||  ইনস্ট্যান্ট রেডি হিজাব+নিকাব সেট || লেয়ারে লেয়ারে ভালবাসা
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="row">
+   <div class="custom-slider-container">
+      <!-- Arrows -->
+      <button class="c-nav prev">❮</button>
+      <!-- Slider Track -->
+      <div class="custom-slider" id="customSlider" style="transform: translateX(0px);">
+         <div class="slide">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/r.png" alt="">
+         </div>
+         <div class="slide">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/s.png" alt="">
+         </div>
+         <div class="slide">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/t.png" alt="">
+         </div>
+         <div class="slide">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/u.png" alt="">
+         </div>
+         <div class="slide">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/v.png" alt="">
+         </div>
+         <div class="slide">
+            <img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/w.png" alt="">
+         </div>
+      </div>
+      <button class="c-nav next">❯</button>
+      <!-- Dots -->
+      <div class="slider-dots" id="sliderDots"><button type="button" class="slider-dot"></button><button type="button" class="slider-dot"></button><button type="button" class="slider-dot"></button><button type="button" class="slider-dot active"></button><button type="button" class="slider-dot"></button><button type="button" class="slider-dot"></button></div>
+   </div>
+</div>
+<div class="mt-2 mb-2">
+   <img src="https://foodbari.com/wp-content/uploads/2025/10/coolllll-red-1.png" alt="" class="code-img">
+   <div class="elementor-button-wrapper">
+      <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+         <span class="elementor-button-content-wrapper">
+            <span class="elementor-button-icon">
+               <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+               </svg>
+            </span>
+            <span class="elementor-button-text">অর্ডার করতে চাই</span>
+         </span>
+      </a>
+   </div>
+</div>
+<!-- === Custom Slider End === -->
+<!-- === Benefit Section Start === -->
+<section class="benefit-section">
+   <h2>
+      যেকারনে আমাদের রেডি হিজাব 
+      <br>
+      <span>
+         আপনার জন্য সেরা চয়েজ হবে-
+         <svg class="c-hrline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path d="M5,125.4c30.5-3.8,137.9-7.6,177.3-7.6c117.2,0,252.2,4.7,312.7,7.6"></path>
+            <path d="M26.9,143.8c55.1-6.1,126-6.3,162.2-6.1c46.5,0.2,203.9,3.2,268.9,6.4"></path>
+         </svg>
+      </span>
+   </h2>
+   <ul>
+      <li><i class="fa-solid fa-check-circle"></i> ১০০% কাপড় ও সেলাই ফিনিশিং গ্যারান্টি।</li>
+      <li><i class="fa-solid fa-check-circle"></i> অরিজিনাল মালয়েশিয়ান শিফন জর্জেট।</li>
+      <li><i class="fa-solid fa-check-circle"></i> ডিজাইন: পেছনে ৩টি লেয়ার, সামনে ২টি লেয়ার যা নিশ্চিত করে পূর্ণ কাভারেজ।</li>
+      <li><i class="fa-solid fa-check-circle"></i> কমফোর্ট: গলার নিচে অ্যাডজাস্টেবল ইলাস্টিক, যা দীর্ঘসময় ব্যবহারেও আরামদায়ক।</li>
+   </ul>
+   <div class="elementor-button-wrapper">
+      <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="elementor-button elementor-button-link elementor-size-sm elementor-animation-pulse-grow elementor-animation-up-down">
+         <span class="elementor-button-content-wrapper">
+            <span class="elementor-button-icon">
+               <svg aria-hidden="true" class="e-font-icon-svg e-fas-cart-arrow-down" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+               </svg>
+            </span>
+            <span class="elementor-button-text">অর্ডার করতে চাই</span>
+         </span>
+      </a>
+   </div>
+</section>
+<!-- === Benefit Section End === -->
+<!-- === Pricing Section Start === -->
+<section class="pricing-section">
+   <h2 class="pricing-heading">আজই সংগ্রহ করে নিন</h2>
+   <p class="pricing-regular">
+      ইখরা রেডি হিজাব প্রাইস
+      <span class="old-price">১৯৮০ টাকা</span>
+   </p>
+   <div class="pricing-offer-label">অফারের মূল্য</div>
+   <div class="pricing-offer-amount">
+      মাত্র <span>১,৩৯০ টাকা</span>
+   </div>
+   <p class="pricing-delivery">সারাদেশে হোম ডেলিভারি দেওয়া হবে</p>
+   <div class="pricing-badge">কোন অগ্রিম টাকা ছাড়াই</div>
+</section>
+<section class="review-section">
+   <div class="review-wrapper">
+      <!-- Top Heading -->
+      <div class="review-title-top">
+         আমাদের শতভাগ কাস্টমার সন্তুষ্টি! রিভিউ দেখুন—
+      </div>
+      <!-- Brown Review Panel -->
+      <div class="review-panel">
+         <h3 class="review-panel-title">সম্মানিত কাস্টমারদের রিভিউ</h3>
+         <div class="review-slider">
+            <!-- Prev / Next -->
+            <button class="rv-nav rv-prev" type="button">
+            ❮
+            </button>
+            <button class="rv-nav rv-next" type="button">
+            ❯
+            </button>
+            <!-- Slider Track -->
+            <div class="review-track" id="reviewTrack">
+               <!-- Slide 1 -->
+               <div class="review-slide">
+                  <div class="review-card">
+                     <div class="review-user">
+                        <div class="review-avatar"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/76_1.jpeg" alt=""></div>
+                        <!-- <div>
+                           Nusaiba Nuha<br>
+                           <span class="review-meta">recommends KISRA • Jun 20</span>
+                        </div> -->
+                     </div>
+                     <!-- <div class="review-body">
+                        আলহামদুলিল্লাহ (KISRA) পেজের থেকে আমি হিজাব অর্ডার করায় খুবই আনন্দিত ও খুশি। হিজাবের কাপড়
+                        এবং ফিনিশিং কোয়ালিটি আশার থেকেও বেশি ভালো লেগেছে। নিঃসংকোচে আপনারাও অর্ডার করতে পারেন ইনশাAllah।
+                     </div> -->
+                  </div>
+               </div>
+               <!-- Slide 2 -->
+               <div class="review-slide">
+                  <div class="review-card">
+                     <div class="review-user">
+                        <div class="review-avatar"><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/76_2.jpeg" alt=""></div>
+                        <!-- <div>
+                           Fatima Ahmed<br>
+                           <span class="review-meta">Verified Customer</span>
+                        </div> -->
+                     </div>
+                     <!-- <div class="review-body">
+                        কাপড়ের কোয়ালিটি এবং কাটিং অসাধারণ। একদম ইনস্ট্যান্ট রেডি, বাইরে যাওয়ার আগে কোনো ঝামেলাই থাকে না।
+                        আবারও অর্ডার করব ইনশাAllah।
+                     </div> -->
+                  </div>
+               </div>
+               <!-- Slide 3 -->
+               <div class="review-slide">
+                  <div class="review-card">
+                     <div class="review-user">
+                        <div class="review-avatar">><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/76_3.jpeg" alt=""></div>
+                        <!-- <div>
+                           Sumaiya Jahan<br>
+                           <span class="review-meta">Regular Buyer</span>
+                        </div> -->
+                     </div>
+                     <!-- <div class="review-body">
+                        কালার ফেড হয় না, পরতেও অনেক আরামদায়ক। নামাজের সময়ও সুন্দর কভারেজ পাওয়া যায়। দামের তুলনায়
+                        অনেক বেশি বেনিফিট।
+                     </div> -->
+                  </div>
+               </div>
+               <!-- Slide 4 -->
+               <div class="review-slide">
+                  <div class="review-card">
+                     <div class="review-user">
+                        <div class="review-avatar">><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/76_4.jpeg" alt=""></div>
+                        <!-- <div>
+                           Sumaiya Jahan<br>
+                           <span class="review-meta">Regular Buyer</span>
+                        </div> -->
+                     </div>
+                     <!-- <div class="review-body">
+                        কালার ফেড হয় না, পরতেও অনেক আরামদায়ক। নামাজের সময়ও সুন্দর কভারেজ পাওয়া যায়। দামের তুলনায়
+                        অনেক বেশি বেনিফিট।
+                     </div> -->
+                  </div>
+               </div>
+               <!-- Slide 5 -->
+               <div class="review-slide">
+                  <div class="review-card">
+                     <div class="review-user">
+                        <div class="review-avatar">><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/76_5.jpeg" alt=""></div>
+                        <!-- <div>
+                           Sumaiya Jahan<br>
+                           <span class="review-meta">Regular Buyer</span>
+                        </div> -->
+                     </div>
+                     <!-- <div class="review-body">
+                        কালার ফেড হয় না, পরতেও অনেক আরামদায়ক। নামাজের সময়ও সুন্দর কভারেজ পাওয়া যায়। দামের তুলনায়
+                        অনেক বেশি বেনিফিট।
+                     </div> -->
+                  </div>
+               </div>
+               <!-- Slide 6 -->
+               <div class="review-slide">
+                  <div class="review-card">
+                     <div class="review-user">
+                        <div class="review-avatar">><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/76_6.jpeg" alt=""></div>
+                        <!-- <div>
+                           Sumaiya Jahan<br>
+                           <span class="review-meta">Regular Buyer</span>
+                        </div> -->
+                     </div>
+                     <!-- <div class="review-body">
+                        কালার ফেড হয় না, পরতেও অনেক আরামদায়ক। নামাজের সময়ও সুন্দর কভারেজ পাওয়া যায়। দামের তুলনায়
+                        অনেক বেশি বেনিফিট।
+                     </div> -->
+                  </div>
+               </div>
+               <!-- Slide 7 -->
+               <div class="review-slide">
+                  <div class="review-card">
+                     <div class="review-user">
+                        <div class="review-avatar">><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/76_7.jpeg" alt=""></div>
+                        <!-- <div>
+                           Sumaiya Jahan<br>
+                           <span class="review-meta">Regular Buyer</span>
+                        </div> -->
+                     </div>
+                     <!-- <div class="review-body">
+                        কালার ফেড হয় না, পরতেও অনেক আরামদায়ক। নামাজের সময়ও সুন্দর কভারেজ পাওয়া যায়। দামের তুলনায়
+                        অনেক বেশি বেনিফিট।
+                     </div> -->
+                  </div>
+               </div>
+               <!-- Slide 8 -->
+               <div class="review-slide">
+                  <div class="review-card">
+                     <div class="review-user">
+                        <div class="review-avatar">><img src="https://storola-client-space.sgp1.digitaloceanspaces.com/resources/clients/storola-clients/salihatgallery.com/catalog/ptblock/76_8.jpeg" alt=""></div>
+                        <!-- <div>
+                           Sumaiya Jahan<br>
+                           <span class="review-meta">Regular Buyer</span>
+                        </div> -->
+                     </div>
+                     <!-- <div class="review-body">
+                        কালার ফেড হয় না, পরতেও অনেক আরামদায়ক। নামাজের সময়ও সুন্দর কভারেজ পাওয়া যায়। দামের তুলনায়
+                        অনেক বেশি বেনিফিট।
+                     </div> -->
+                  </div>
+               </div>
+               <!-- Slide 9 -->
+            </div>
+            <!-- /review-track -->
+         </div>
+         <!-- /review-slider -->
+         <div class="review-logo">
+            <!-- Replace with your logo image if you want -->
+            <!-- কিসরা কালেকশন -->
+         </div>
+      </div>
+      <!-- /review-panel -->
+      <!-- CTA Button -->
+      <div class="review-cta-wrap">
+         <a onclick="document.getElementById('superchekout-section-container').scrollIntoView()" class="review-cta-btn">অর্ডার করতে চাই</a>
+      </div>
+   </div>
+</section>
+<!-- === Pricing Section End === -->
+<!-- === Slider Script === -->
+<script>
+   jQuery(document).ready(function ($) {
+     /* ================= FIRST (IMAGE) SLIDER ================= */
+     const slider = document.getElementById("customSlider");
+     if (slider) {
+       const slides = slider.querySelectorAll(".slide");
+       const prevBtn = document.querySelector(".custom-slider-container .prev");
+       const nextBtn = document.querySelector(".custom-slider-container .next");
+       const dotsContainer = document.getElementById("sliderDots");
+   
+       let index = 0;
+       let slideWidth = slides[0].clientWidth;
+       let slidesPerView = getSlidesPerView();
+       let autoSlide;
+   
+       function getSlidesPerView() {
+         const w = window.innerWidth;
+         if (w <= 575) return 1;
+         if (w <= 991) return 2;
+         return 3;
+       }
+   
+       function updateSizes() {
+         slideWidth = slides[0].clientWidth;
+         slidesPerView = getSlidesPerView();
+         const maxIndex = Math.max(0, slides.length - slidesPerView);
+         if (index > maxIndex) index = maxIndex;
+         updateSlide(false);
+       }
+   
+       function createDots() {
+         if (!dotsContainer) return;
+         dotsContainer.innerHTML = "";
+         for (let i = 0; i < slides.length; i++) {
+           const dot = document.createElement("button");
+           dot.type = "button";
+           dot.className = "slider-dot" + (i === index ? " active" : "");
+           dot.addEventListener("click", function () {
+             const maxIndex = Math.max(0, slides.length - slidesPerView);
+             index = Math.min(i, maxIndex);
+             updateSlide();
+           });
+           dotsContainer.appendChild(dot);
+         }
+       }
+   
+       function setActiveDot() {
+         if (!dotsContainer) return;
+         const dots = dotsContainer.querySelectorAll(".slider-dot");
+         dots.forEach((dot, i) => {
+           dot.classList.toggle("active", i === index);
+         });
+       }
+   
+       function resetAutoSlide() {
+         clearInterval(autoSlide);
+         autoSlide = setInterval(nextSlide, 2500);
+       }
+   
+       function updateSlide(resetAuto = true) {
+         slider.style.transform = "translateX(" + (-index * slideWidth) + "px)";
+         setActiveDot();
+         if (resetAuto) resetAutoSlide();
+       }
+   
+       function nextSlide() {
+         const maxIndex = Math.max(0, slides.length - slidesPerView);
+         if (index >= maxIndex) {
+           index = 0;
+         } else {
+           index++;
+         }
+         updateSlide();
+       }
+   
+       function prevSlide() {
+         const maxIndex = Math.max(0, slides.length - slidesPerView);
+         if (index <= 0) {
+           index = maxIndex;
+         } else {
+           index--;
+         }
+         updateSlide();
+       }
+   
+       prevBtn.addEventListener("click", prevSlide);
+       nextBtn.addEventListener("click", nextSlide);
+       window.addEventListener("resize", updateSizes);
+   
+       createDots();
+       updateSizes();
+       resetAutoSlide();
+   
+       slider.addEventListener("mouseenter", function () {
+         clearInterval(autoSlide);
+       });
+       slider.addEventListener("mouseleave", function () {
+         resetAutoSlide();
+       });
+     }
+   
+     /* ================= SECOND (REVIEW) SLIDER ================= */
+     const reviewTrack = document.getElementById("reviewTrack");
+     const rvPrev = document.querySelector(".rv-prev");
+     const rvNext = document.querySelector(".rv-next");
+   
+     if (reviewTrack && rvPrev && rvNext) {
+       const reviewSlides = reviewTrack.querySelectorAll(".review-slide");
+       let reviewIndex = 0;
+   
+       function updateReviewSlide() {
+         reviewTrack.style.transform = "translateX(" + (-reviewIndex * 100) + "%)";
+       }
+   
+       rvNext.addEventListener("click", function () {
+         reviewIndex = (reviewIndex + 1) % reviewSlides.length;
+         updateReviewSlide();
+       });
+   
+       rvPrev.addEventListener("click", function () {
+         reviewIndex = (reviewIndex - 1 + reviewSlides.length) % reviewSlides.length;
+         updateReviewSlide();
+       });
+     }
+   });
+</script>
